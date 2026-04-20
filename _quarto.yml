@@ -1,0 +1,56 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Your Name"
+  description: "Artist portfolio"
+  favicon: images/favicon.ico
+
+  navbar:
+    left:
+      - href: index.qmd
+        text: Work
+      - href: about.qmd
+        text: About
+    right:
+      - icon: instagram
+        href: https://instagram.com/yourhandle
+        aria-label: Instagram
+
+  page-footer:
+    center: "© 2025 Your Name"
+    border: true
+
+format:
+  html:
+    theme: none
+    css: styles.css
+    toc: false
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    include-after-body:
+      text: |
+        <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            GLightbox({
+              loop: true,
+              touchNavigation: true,
+              keyboardNavigation: true,
+              closeButton: true,
+              svg: {
+                close: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+              }
+            });
+          });
+        </script>
+
+execute:
+  echo: false
+  warning: false
+  message: false

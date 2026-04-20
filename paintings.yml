@@ -1,0 +1,38 @@
+# paintings.yml
+# ─────────────────────────────────────────────────────────────────────────────
+# Optional metadata for your paintings.
+# Each entry matches a filename in images/paintings/.
+# Fields: file (required), title, year, medium
+#
+# HOW TO ADD A NEW PAINTING:
+#   1. Drop the image file into images/paintings/
+#   2. Add an entry below (or skip — the filename will be used as the title)
+#   3. git add + git commit + git push → the site rebuilds automatically
+# ─────────────────────────────────────────────────────────────────────────────
+
+- file: painting-01.jpg
+  title: "Untitled I"
+  year: 2024
+  medium: "Oil on linen"
+
+- file: painting-02.jpg
+  title: "Evening Study"
+  year: 2024
+  medium: "Oil on canvas"
+
+- file: painting-03.jpg
+  title: "Still Life with Blue Cloth"
+  year: 2023
+  medium: "Oil on panel"
+
+- file: painting-04.jpg
+  title: "Interior, October"
+  year: 2023
+  medium: "Acrylic on canvas"
+
+- file: painting-05.jpg
+  title: "Figure Study II"
+  year: 2022
+  medium: "Charcoal on paper"
+
+# Add more entries here...

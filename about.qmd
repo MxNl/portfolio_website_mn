@@ -1,0 +1,35 @@
+---
+title: ""
+---
+
+::: {.about-layout}
+
+::: {.about-photo}
+![](images/portrait.jpg){.portrait}
+:::
+
+::: {.about-text}
+
+## Your Name
+
+Write a paragraph about yourself here. Where you're based, what drives your practice,
+the materials or methods you work with. Keep it personal and direct — visitors
+want to hear your voice, not a biography.
+
+A second paragraph can go into more depth: influences, recurring themes, the
+questions your work explores.
+
+---
+
+**Contact**  
+[hello@yourname.com](mailto:hello@yourname.com)
+
+**Instagram**  
+[@yourhandle](https://instagram.com/yourhandle)
+
+**CV**  
+[Download PDF](cv.pdf)
+
+:::
+
+:::
