@@ -47,21 +47,21 @@ format:
           if (!root || paintings.length === 0) return;
 
           root.innerHTML = paintings.map(function (p) {
-  var desc = [p.year, p.medium].filter(Boolean).join(" \u00B7 ");
-  var caption = "title: " + p.title + (desc ? "; description: " + desc : "");
-  return [
-    '<a class="gallery-item glightbox"',
-    '   href="images/paintings/' + p.file + '"',
-    '   data-gallery="paintings"',
-    '   data-glightbox="' + caption + '">',     // ← replaces data-title / data-description
-    '  <img src="images/paintings/' + p.file + '" alt="' + p.title + '" loading="lazy">',
-    '  <div class="gallery-overlay">',
-    '    <span class="gallery-title">' + p.title + '</span>',
-    desc ? '    <span class="gallery-desc">' + desc + '</span>' : '',
-    '  </div>',
-    '</a>'
-  ].join("\n");
-}).join("\n");
+            var desc = [p.year, p.medium].filter(Boolean).join(" \u00B7 ");
+            return [
+              '<a class="gallery-item glightbox"',
+              '   href="images/paintings/' + p.file + '"',
+              '   data-gallery="paintings"',
+              '   data-title="' + p.title + '"',
+              '   data-description="' + desc + '">',
+              '  <img src="images/paintings/' + p.file + '" alt="' + p.title + '" loading="lazy">',
+              '  <div class="gallery-overlay">',
+              '    <span class="gallery-title">' + p.title + '</span>',
+              desc ? '    <span class="gallery-desc">' + desc + '</span>' : '',
+              '  </div>',
+              '</a>'
+            ].join("\n");
+          }).join("\n");
 
           GLightbox({ selector: ".glightbox", loop: true, touchNavigation: true });
         });
