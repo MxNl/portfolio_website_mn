@@ -1,113 +1,88 @@
-/* ── Variables ─────────────────────────────────────────────────────────────── */
+/* ── Bootstrap / Cosmo variable overrides ──────────────────────────────────── */
+/*
+  These --bs-* variables are read by Bootstrap 5, so overriding them here
+  (in a file loaded after cosmo) changes the whole theme without !important hacks.
+*/
 :root {
-  --font-body:   "DM Sans", system-ui, sans-serif;
-  --color-text:  #1a1a1a;
-  --color-muted: #888;
-  --color-line:  #e8e8e8;
-  --color-bg:    #ffffff;
-  --nav-height:  56px;
-  --gap:         4px;          /* gap between gallery items */
-  --cols:        3;            /* gallery columns on desktop */
-  --max-width:   1400px;
+  --bs-font-sans-serif:    "DM Sans", system-ui, sans-serif;
+  --bs-body-font-weight:   300;
+  --bs-body-color:         #1a1a1a;
+  --bs-body-bg:            #ffffff;
+  --bs-link-color:         #1a1a1a;
+  --bs-link-hover-color:   #1a1a1a;
+  --bs-navbar-active-color:#1a1a1a;
+  --bs-navbar-hover-color: #1a1a1a;
+  --bs-navbar-color:       #888;
+
+  /* site-level variables */
+  --color-muted:  #888;
+  --color-line:   #e8e8e8;
+  --gap:          4px;
+  --cols:         3;
 }
 
-/* ── Reset & base ──────────────────────────────────────────────────────────── */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 16px;
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+body {
   -webkit-font-smoothing: antialiased;
 }
 
-body {
-  font-family: var(--font-body);
-  font-weight: 300;
-  color: var(--color-text);
-  background: var(--color-bg);
-  line-height: 1.7;
-}
-
 a {
-  color: inherit;
   text-decoration: none;
 }
 
-/* ── Quarto overrides ──────────────────────────────────────────────────────── */
-/* Remove default Quarto padding/containers on the gallery page */
-.page-layout-full #quarto-content {
-  padding: 0;
-}
-
-.page-layout-full main {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-#quarto-document-content {
-  margin: 0;
-  padding: 0;
+::selection {
+  background: #1a1a1a;
+  color: #fff;
 }
 
 /* ── Navbar ─────────────────────────────────────────────────────────────────── */
-#quarto-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: var(--color-bg);
+/* Quarto renders a Bootstrap 5 navbar; cosmo provides the collapse/mobile JS.
+   We just need to slim it down visually. */
+#quarto-header nav.navbar {
   border-bottom: 1px solid var(--color-line);
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: var(--nav-height);
-  padding: 0 2rem;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  background: transparent !important;
+  background: #fff !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 56px;
 }
 
 .navbar-brand {
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0.02em;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  color: #1a1a1a !important;
 }
 
-.navbar-nav {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  align-items: center;
-}
-
-.navbar-nav .nav-link {
+#quarto-header .nav-link {
   font-size: 0.875rem;
   font-weight: 300;
-  color: var(--color-muted);
-  transition: color 0.15s;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Remove cosmo's coloured active underline */
+#quarto-header .nav-link.active,
+#quarto-header .nav-link:hover {
+  border: none !important;
+  color: #1a1a1a !important;
+}
+
+/* ── Quarto layout overrides ─────────────────────────────────────────────────── */
+/* full-width gallery page: strip the default container padding */
+.page-layout-full #quarto-content,
+.page-layout-full main.content {
   padding: 0 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
 }
 
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-  color: var(--color-text);
-}
-
-/* hide Quarto's default navbar toggler on mobile */
-.navbar-toggler {
-  display: none;
-}
+/* hide auto-generated title block on pages where title is "" */
+.quarto-title-block { display: none; }
 
 /* ── Gallery grid ───────────────────────────────────────────────────────────── */
 /*
-  CSS columns give a free masonry effect: images stack naturally without JS.
-  Each image preserves its aspect ratio. Drop a new image into images/paintings/
-  and re-render — that's the entire workflow.
+  CSS columns = free masonry layout.
+  Paintings stack naturally in columns, preserving each image's aspect ratio.
+  No JS needed for the layout itself.
 */
 .gallery-grid {
   columns: var(--cols);
@@ -123,7 +98,7 @@ a {
   position: relative;
   overflow: hidden;
   cursor: zoom-in;
-  background: #f0f0f0; /* placeholder while image loads */
+  background: #f0f0f0;    /* placeholder colour while image loads */
 }
 
 .gallery-item img {
@@ -133,12 +108,12 @@ a {
   transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-/* Hover: slight zoom + darken, show caption overlay */
 .gallery-item:hover img {
   transform: scale(1.02);
   filter: brightness(0.82);
 }
 
+/* Caption overlay — fades in on hover */
 .gallery-overlay {
   position: absolute;
   bottom: 0;
@@ -171,57 +146,29 @@ a {
   margin-top: 0.15rem;
 }
 
-.gallery-empty {
-  padding: 4rem 2rem;
-  text-align: center;
-  color: var(--color-muted);
-  font-size: 0.9rem;
-}
+/* ── Responsive columns ──────────────────────────────────────────────────────── */
+@media (max-width: 1100px) { .gallery-grid { columns: 2; } }
+@media (max-width:  640px) { .gallery-grid { columns: 1; } }
 
-/* ── Responsive columns ─────────────────────────────────────────────────────── */
-@media (max-width: 1100px) {
-  .gallery-grid { columns: 2; }
-}
-
-@media (max-width: 640px) {
-  .gallery-grid { columns: 1; }
-  .navbar { padding: 0 1rem; }
-}
-
-/* ── GLightbox customisation ─────────────────────────────────────────────────── */
+/* ── GLightbox overrides ─────────────────────────────────────────────────────── */
 .glightbox-container .gslide-title {
-  font-family: var(--font-body);
+  font-family: "DM Sans", sans-serif;
   font-weight: 400;
   font-size: 0.9rem;
   letter-spacing: 0.01em;
 }
 
 .glightbox-container .gslide-desc {
-  font-family: var(--font-body);
+  font-family: "DM Sans", sans-serif;
   font-weight: 300;
   font-size: 0.8rem;
   color: #aaa;
 }
 
-.glightbox-container .gprev,
-.glightbox-container .gnext,
-.glightbox-container .gclose {
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 50%;
-  transition: background 0.15s;
-}
-
-.glightbox-container .gprev:hover,
-.glightbox-container .gnext:hover,
-.glightbox-container .gclose:hover {
-  background: rgba(255,255,255,0.12);
-}
-
 /* ── About page ──────────────────────────────────────────────────────────────── */
 .about-layout {
   display: grid;
-  grid-template-columns: 340px 1fr;
+  grid-template-columns: 320px 1fr;
   gap: 4rem;
   max-width: 900px;
   margin: 5rem auto;
@@ -230,13 +177,13 @@ a {
 
 .portrait {
   width: 100%;
-  aspect-ratio: 3/4;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   display: block;
 }
 
 .about-text h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
 }
@@ -244,7 +191,6 @@ a {
 .about-text p {
   font-size: 0.95rem;
   color: #333;
-  margin-bottom: 1rem;
 }
 
 .about-text hr {
@@ -253,11 +199,12 @@ a {
   margin: 2rem 0;
 }
 
+/* Style the bold labels (Contact, Instagram, CV) */
 .about-text strong {
   font-weight: 400;
   display: block;
-  margin-bottom: 0.15rem;
-  font-size: 0.8rem;
+  margin: 1rem 0 0.15rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--color-muted);
@@ -269,28 +216,13 @@ a {
     gap: 2rem;
     margin: 2.5rem auto;
   }
-  .portrait {
-    max-width: 260px;
-  }
+  .portrait { max-width: 240px; }
 }
 
 /* ── Footer ──────────────────────────────────────────────────────────────────── */
 #quarto-footer {
-  border-top: 1px solid var(--color-line);
-  padding: 1.5rem 0;
-  text-align: center;
   font-size: 0.78rem;
   color: var(--color-muted);
   font-weight: 300;
 }
 
-/* ── Prose pages (about) ─────────────────────────────────────────────────────── */
-.quarto-title-block {
-  display: none; /* hide auto-generated page titles */
-}
-
-/* ── Selection color ─────────────────────────────────────────────────────────── */
-::selection {
-  background: #1a1a1a;
-  color: #fff;
-}

@@ -1,0 +1,15 @@
+/.quarto/
+**/*.quarto_ipynb
+
+# Quarto build output — rebuilt by GitHub Actions on every push
+_site/
+
+# Quarto cache and metadata
+.quarto/
+*_cache/
+*_files/
+
+# R session artifacts
+.Rhistory
+.RData
+.Rproj.user/

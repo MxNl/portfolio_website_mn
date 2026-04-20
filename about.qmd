@@ -1,14 +1,14 @@
 ---
-title: " "
+title: ""
 ---
 
-::: {.about-layout}
+<div class="about-layout">
 
-::: {.about-photo}
+<div class="about-photo">
 ![](images/portrait.jpg){.portrait}
-:::
+</div>
 
-::: {.about-text}
+<div class="about-text">
 
 ## Your Name
 
@@ -21,15 +21,16 @@ questions your work explores.
 
 ---
 
-**Contact**  
+**Contact**\
 [hello@yourname.com](mailto:hello@yourname.com)
 
-**Instagram**  
+**Instagram**\
 [@yourhandle](https://instagram.com/yourhandle)
 
-**CV**  
+**CV**\
 [Download PDF](cv.pdf)
 
-:::
+</div>
 
-:::
+</div>
+
