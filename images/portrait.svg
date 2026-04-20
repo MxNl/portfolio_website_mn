@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="123.86264mm"
+   height="123.86264mm"
+   viewBox="0 0 123.86264 123.86264"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   sodipodi:docname="portrait.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showguides="false"
+     inkscape:zoom="0.66646401"
+     inkscape:cx="159.79858"
+     inkscape:cy="0.75022805"
+     inkscape:window-width="2560"
+     inkscape:window-height="1299"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g5">
+    <sodipodi:guide
+       position="41.586582,78.33676"
+       orientation="1,0"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="81.625715,79.63676"
+       orientation="1,0"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="61.606147,78.98676"
+       orientation="1,0"
+       id="guide3"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-32.434494,-53.594406)">
+    <circle
+       style="fill:#fb9d9d;fill-opacity:1;stroke:none;stroke-width:0.952113;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path5"
+       cx="94.365814"
+       cy="115.52573"
+       r="61.93132"
+       inkscape:export-filename="portrait.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g5"
+       transform="translate(0,2.6469056)">
+      <path
+         id="path1"
+         style="fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.952113;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         d="m 94.127754,66.337745 c -46.762488,0 -14.186388,54.794895 -14.186388,54.794895 l 0.06055,14.57773 H 64.934822 l -3.875587,18.23343 h 4.333921 v 1.21642 h 57.469194 v -1.21642 h 4.81005 l -3.87559,-18.23343 h -15.5436 l 0.0606,-14.57773 c 0,0 32.57648,-54.794895 -14.186011,-54.794895 z"
+         sodipodi:nodetypes="zccccccccccccz" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:12.0521px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.22061;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         x="65.571526"
+         y="148.24876"
+         id="text5"><tspan
+           sodipodi:role="line"
+           id="tspan5"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Carlito;-inkscape-font-specification:'Carlito Bold';fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.22061"
+           x="65.571526"
+           y="148.24876">portrait.jpg</tspan></text>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.962344;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect5"
+         width="57.469196"
+         height="2.4304941"
+         x="65.393158"
+         y="153.94382" />
+    </g>
+  </g>
+</svg>

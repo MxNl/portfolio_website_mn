@@ -2,10 +2,11 @@ project:
   type: website
   output-dir: _site
   resources:
-    - images/
+    - images/         # copy all images to _site/ even though they're loaded via JS
+    - fonts/
 
 website:
-  title: "Your Name"
+  title: "Max Nölscher"
   description: "Artist portfolio"
 
   navbar:
@@ -15,25 +16,26 @@ website:
       - href: about.qmd
         text: About
     right:
-      - icon: instagram
-        href: https://instagram.com/yourhandle
-        aria-label: Instagram
+      - icon: mastodon
+        href: https://toot.community/@ichmagsnichtmoegen@toot.community
+        aria-label: Mastodon
+      - text: "<i class='fa-brands fa-bluesky'></i>"
+        href: https://bsky.app/profile/ichmagsnichtmoegen.bsky.social
+        aria-label: Bluesky
 
   page-footer:
-    center: "© 2025 Your Name"
+    center: "© 2026 Max Nölscher"
     border: true
 
 format:
   html:
-    theme: cosmo       # provides Bootstrap 5 so the navbar collapses/works correctly
-    css: styles.css  # our overrides, loaded after cosmo
+    theme: cosmo      # provides Bootstrap 5 so the navbar collapses/works correctly
+    css: styles.css   # plain CSS overrides, loaded after cosmo
     toc: false
     include-in-header:
       text: |
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
     include-after-body:
       text: |
         <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
@@ -45,21 +47,21 @@ format:
           if (!root || paintings.length === 0) return;
 
           root.innerHTML = paintings.map(function (p) {
-            var desc = [p.year, p.medium].filter(Boolean).join(" \u00B7 ");
-            return [
-              '<a class="gallery-item glightbox"',
-              '   href="images/paintings/' + p.file + '"',
-              '   data-gallery="paintings"',
-              '   data-title="' + p.title + '"',
-              '   data-description="' + desc + '">',
-              '  <img src="images/paintings/' + p.file + '" alt="' + p.title + '" loading="lazy">',
-              '  <div class="gallery-overlay">',
-              '    <span class="gallery-title">' + p.title + '</span>',
-              desc ? '    <span class="gallery-desc">' + desc + '</span>' : '',
-              '  </div>',
-              '</a>'
-            ].join("\n");
-          }).join("\n");
+  var desc = [p.year, p.medium].filter(Boolean).join(" \u00B7 ");
+  var caption = "title: " + p.title + (desc ? "; description: " + desc : "");
+  return [
+    '<a class="gallery-item glightbox"',
+    '   href="images/paintings/' + p.file + '"',
+    '   data-gallery="paintings"',
+    '   data-glightbox="' + caption + '">',     // ← replaces data-title / data-description
+    '  <img src="images/paintings/' + p.file + '" alt="' + p.title + '" loading="lazy">',
+    '  <div class="gallery-overlay">',
+    '    <span class="gallery-title">' + p.title + '</span>',
+    desc ? '    <span class="gallery-desc">' + desc + '</span>' : '',
+    '  </div>',
+    '</a>'
+  ].join("\n");
+}).join("\n");
 
           GLightbox({ selector: ".glightbox", loop: true, touchNavigation: true });
         });

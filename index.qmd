@@ -12,7 +12,7 @@ meta_map  <- list()
 if (file.exists(yml_path)) {
   raw <- yaml::read_yaml(yml_path)
   for (entry in raw) {
-    if (!is.null(entry$file)) meta_map[[entry$file]] <- entry
+    if (!is.null(entry$file)) meta_map[[tolower(entry$file)]] <- entry  # ← tolower
   }
 }
 
@@ -40,7 +40,7 @@ if (length(imgs) == 0) {
 } else {
   # Build JSON array of painting objects
   entries <- vapply(imgs, function(img) {
-    m      <- meta_map[[img]]
+    m      <- meta_map[[tolower(img)]]
     title  <- esc_json(if (!is.null(m$title))  m$title                else tools::file_path_sans_ext(img))
     year   <- esc_json(if (!is.null(m$year))   as.character(m$year)   else "")
     medium <- esc_json(if (!is.null(m$medium)) m$medium               else "")

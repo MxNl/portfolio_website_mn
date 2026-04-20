@@ -5,16 +5,14 @@ title: ""
 <div class="about-layout">
 
 <div class="about-photo">
-![](images/portrait.jpg){.portrait}
+![](images/portrait.png){.portrait}
 </div>
 
 <div class="about-text">
 
-## Your Name
+## Max Nölscher
 
-Write a paragraph about yourself here. Where you're based, what drives your practice,
-the materials or methods you work with. Keep it personal and direct — visitors
-want to hear your voice, not a biography.
+I am a part-time artist based in Berlin, Germany. I use standard wood stamps as used in offices to compose prints consisting of thousands of single stamp imprints. I usually do larger formats with something like 120 cm x 160 cm. I print on multiple materials like sketching paper, wood or textiles.
 
 A second paragraph can go into more depth: influences, recurring themes, the
 questions your work explores.
@@ -22,15 +20,26 @@ questions your work explores.
 ---
 
 **Contact**\
-[hello@yourname.com](mailto:hello@yourname.com)
+<a id="contact-email">&#x200B;</a>
+<script>
+  (function () {
+    var u = "max-n";
+    var d = "posteo.de";
+    var a = document.getElementById("contact-email");
+    a.textContent = u + "@" + d;
+    a.href = "mailto:" + u + "@" + d;
+  })();
+</script>
 
-**Instagram**\
-[@yourhandle](https://instagram.com/yourhandle)
+**Mastodon**\
+[@ichmagsnichtmoegen@toot.community](https://toot.community/@ichmagsnichtmoegen@toot.community)
 
-**CV**\
-[Download PDF](cv.pdf)
+**Bluesky**\
+[@ichmagsnichtmoegen.bsky.social](https://bsky.app/profile/ichmagsnichtmoegen.bsky.social)
+
+<!-- **CV**\ -->
+<!-- [Download PDF](cv.pdf) -->
 
 </div>
 
 </div>
-

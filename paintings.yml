@@ -10,29 +10,25 @@
 #   3. git add + git commit + git push → the site rebuilds automatically
 # ─────────────────────────────────────────────────────────────────────────────
 
-- file: painting-01.jpg
+- file: IMG_2451.JPG
   title: "Untitled I"
-  year: 2024
-  medium: "Oil on linen"
+  year: 2025
+  medium: "Spray paint and stamp ink on wood"
 
-- file: painting-02.jpg
-  title: "Evening Study"
-  year: 2024
-  medium: "Oil on canvas"
+- file: IMG_2451_copy.JPG
+  title: "Untitled I"
+  year: 2025
+  medium: "Spray paint and stamp ink on wood"
 
-- file: painting-03.jpg
-  title: "Still Life with Blue Cloth"
-  year: 2023
-  medium: "Oil on panel"
+- file: IMG_2453.JPG
+  title: "Untitled II"
+  year: 2026
+  medium: "Stamp ink and spray paint on paper"
 
-- file: painting-04.jpg
-  title: "Interior, October"
-  year: 2023
-  medium: "Acrylic on canvas"
+- file: IMG_2584.JPG
+  title: "Untitled III"
+  year: 2026
+  medium: "Stamp ink on paper"
 
-- file: painting-05.jpg
-  title: "Figure Study II"
-  year: 2022
-  medium: "Charcoal on paper"
 
 # Add more entries here...
