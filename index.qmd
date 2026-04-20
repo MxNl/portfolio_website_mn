@@ -5,6 +5,7 @@ page-layout: full
 
 ```{r}
 #| output: asis
+#| cache: false
 
 # ── Read optional metadata ────────────────────────────────────────────────────
 yml_path <- "paintings.yml"
