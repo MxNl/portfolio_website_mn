@@ -34,6 +34,9 @@ format:
     toc: false
     include-in-header:
       text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
     include-after-body:
@@ -43,11 +46,11 @@ format:
         document.addEventListener("DOMContentLoaded", function () {
           var root = document.getElementById("gallery-root");
           var paintings = window.__paintings || [];
-
+ 
           if (!root || paintings.length === 0) return;
-
+ 
           root.innerHTML = paintings.map(function (p) {
-            var desc = [p.year, p.medium].filter(Boolean).join(" \u00B7 ");
+            var desc = [p.year, p.medium, p.format].filter(Boolean).join(" \u00B7 ");
             return [
               '<a class="gallery-item glightbox"',
               '   href="images/paintings/' + p.file + '"',
@@ -62,11 +65,11 @@ format:
               '</a>'
             ].join("\n");
           }).join("\n");
-
+ 
           GLightbox({ selector: ".glightbox", loop: true, touchNavigation: true });
         });
         </script>
-
+ 
 execute:
   echo: false
   warning: false

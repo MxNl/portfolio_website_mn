@@ -18,12 +18,19 @@ if (file.exists(yml_path)) {
 }
 
 # ── Scan images folder ────────────────────────────────────────────────────────
-imgs <- list.files(
+# All images physically present in the folder
+all_imgs <- list.files(
   "images/paintings",
-  pattern    = "\\.(jpg|jpeg|png|webp)$",
-  full.names = FALSE,
+  pattern     = "\\.(jpg|jpeg|png|webp)$",
+  full.names  = FALSE,
   ignore.case = TRUE
 )
+
+# Build ordered list: YAML order first, then unlisted images appended
+yml_files <- vapply(raw, function(e) e$file, character(1))
+yml_files <- yml_files[tolower(yml_files) %in% tolower(all_imgs)]  # only keep ones that exist
+rest      <- all_imgs[!tolower(all_imgs) %in% tolower(yml_files)]  # unlisted images
+imgs      <- c(yml_files, rest)
 
 # ── Build JSON string (no external packages needed) ───────────────────────────
 esc_json <- function(s) {
@@ -45,8 +52,9 @@ if (length(imgs) == 0) {
     title  <- esc_json(if (!is.null(m$title))  m$title                else tools::file_path_sans_ext(img))
     year   <- esc_json(if (!is.null(m$year))   as.character(m$year)   else "")
     medium <- esc_json(if (!is.null(m$medium)) m$medium               else "")
-    sprintf('{"file":"%s","title":"%s","year":"%s","medium":"%s"}',
-            esc_json(img), title, year, medium)
+    format <- esc_json(if (!is.null(m$format)) m$format else "")
+    sprintf('{"file":"%s","title":"%s","year":"%s","medium":"%s","format":"%s"}',
+        esc_json(img), title, year, medium, format)
   }, character(1))
 
   json <- paste0("[", paste(entries, collapse = ","), "]")
