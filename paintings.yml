@@ -15,24 +15,28 @@
   year: 2025
   medium: "Spray paint and stamp ink on wood"
   format: "150 x 50 cm"
+  group: "2025"
 
 - file: IMG_2453.JPG
   title: "Untitled II"
   year: 2026
   medium: "Stamp ink and spray paint on paper"
   format: "150 x 50 cm"
+  group: "2025"
 
 - file: IMG_2451_copy.JPG
   title: "Untitled I"
   year: 2025
   medium: "Spray paint and stamp ink on wood"
   format: "150 x 50 cm"
+  group: "2026"
 
 - file: IMG_2584.JPG
   title: "Untitled III"
   year: 2026
   medium: "Stamp ink on paper"
   format: "150 x 50 cm"
+  group: "2026"
 
 
 # Add more entries here...
