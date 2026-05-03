@@ -275,3 +275,8 @@ a {
   font-weight: 300;
 }
 
+#quarto-header nav.navbar {
+  --bs-navbar-color: #888;
+  --bs-navbar-hover-color: #1a1a1a;
+  --bs-navbar-active-color: #1a1a1a;
+}

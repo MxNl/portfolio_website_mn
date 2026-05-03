@@ -53,14 +53,15 @@ if (length(imgs) == 0) {
     year   <- esc_json(if (!is.null(m$year))   as.character(m$year)   else "")
     medium <- esc_json(if (!is.null(m$medium)) m$medium               else "")
     format <- esc_json(if (!is.null(m$format)) m$format else "")
-    sprintf('{"file":"%s","title":"%s","year":"%s","medium":"%s","format":"%s"}',
-        esc_json(img), title, year, medium, format)
+    group  <- esc_json(if (!is.null(m$group))  m$group  else "default")
+    sprintf('{"file":"%s","title":"%s","year":"%s","medium":"%s","format":"%s","group":"%s"}',
+        esc_json(img), title, year, medium, format, group)
   }, character(1))
 
   json <- paste0("[", paste(entries, collapse = ","), "]")
 
   # Two self-contained HTML elements (no unclosed divs for pandoc to worry about)
-  cat('<div id="gallery-root" class="gallery-grid"></div>')
+  cat('<div id="gallery-root"></div>')
   cat(sprintf('<script>window.__paintings = %s;</script>', json))
 }
 ```
