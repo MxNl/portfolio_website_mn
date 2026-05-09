@@ -10,47 +10,96 @@
 #   3. git add + git commit + git push → the site rebuilds automatically
 # ─────────────────────────────────────────────────────────────────────────────
 
-- file: IMG_2451.JPG
-  title: "Untitled I"
+- file: staimping_acorn-wildboar.JPG
+  title: "acorn wildboar"
   year: 2025
-  medium: "Spray paint and stamp ink on wood"
-  format: "150 x 50 cm"
-  group: "apple"
+  medium: "Stamp ink and spray paint on poplar wood"
+  format: "160 x 120 cm"
+  group: "acorn"
 
-- file: IMG_2453.JPG
-  title: "Untitled II"
+- file: staimping_acorn-mouse.JPG
+  title: "acorn mouse"
+  year: 2025
+  medium: "Stamp ink and spray paint on poplar wood"
+  format: "120 x 60 cm"
+  group: "acorn"
+
+- file: staimping_acorn-caterpillar.JPG
+  title: "acorn caterpillar"
+  year: 2025
+  medium: "Stamp ink and spray paint on poplar wood"
+  format: "120 x 60 cm"
+  group: "acorn"
+
+- file: staimping_acorn-popped.JPG
+  title: "acorn popped"
+  year: 2025
+  medium: "Stamp ink on paper"
+  format: "100 x 100 cm"
+  group: "acorn"
+
+- file: staimping_snail-straight.JPG
+  title: "snail I"
   year: 2026
   medium: "Stamp ink and spray paint on paper"
-  format: "150 x 50 cm"
-  group: "apple"
+  format: "150 x 100 cm"
+  group: "snail"
 
-- file: IMG_2453_copy.JPG
-  title: "Untitled II copy"
+- file: staimping_snail-crossing.JPG
+  title: "snail II"
   year: 2026
   medium: "Stamp ink and spray paint on paper"
-  format: "150 x 50 cm"
-  group: "apple"
+  format: "150 x 100 cm"
+  group: "snail"
 
-- file: IMG_2451_copy.JPG
-  title: "Untitled I copy"
-  year: 2025
-  medium: "Spray paint and stamp ink on wood"
-  format: "150 x 50 cm"
-  group: "pear"
-
-- file: IMG_2584.JPG
-  title: "Untitled III"
+- file: staimping_snail-love.JPG
+  title: "snail III"
   year: 2026
-  medium: "Stamp ink on paper"
-  format: "150 x 50 cm"
-  group: "pear"
+  medium: "Stamp ink and spray paint on paper"
+  format: "150 x 100 cm"
+  group: "snail"
 
-- file: IMG_2584_copy.JPG
-  title: "Untitled III copy"
+- file: staimping_multiuse.JPG
+  title: "admiration"
   year: 2026
-  medium: "Stamp ink on paper"
+  medium: "Stamp ink and spray paint on wooden formwork panel"
   format: "150 x 50 cm"
-  group: "pear"
+  group: "mixed"
+
+- file: staimping_octo.JPG
+  title: "impro on left overs"
+  year: 2026
+  medium: "Stamp ink and spray paint on particleboard"
+  format: "98 x 122 cm"
+  group: "mixed"
+
+- file: staimping_minister-kindness.JPG
+  title: "minister kindness"
+  year: 2016
+  medium: "Stamp ink and spray paint on poplar wood"
+  format: "... x ... cm"
+  group: "mixed"
+
+- file: staimping_itsaboutclass.JPG
+  title: "its about class, ..."
+  year: 2026
+  medium: "Stamp ink and spray paint on paper"
+  format: "150 x 120 cm"
+  group: "mixed"
+
+- file: staimping_rabbit-wolf.JPG
+  title: "leash"
+  year: 2026
+  medium: "Stamp ink and spray paint on paper"
+  format: "150 x 100 cm"
+  group: "mixed"
+
+- file: staimping_reptiloid.JPG
+  title: "the endzeitgeist"
+  year: 2026
+  medium: "Stamp ink and acryl on paper"
+  format: "140 x 100 cm"
+  group: "mixed"
 
 
 # Add more entries here...

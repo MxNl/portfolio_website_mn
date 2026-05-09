@@ -13,3 +13,6 @@ _site/
 .Rhistory
 .RData
 .Rproj.user/
+
+# immediate image versions
+process/
