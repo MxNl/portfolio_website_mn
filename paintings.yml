@@ -15,91 +15,91 @@
   year: 2025
   medium: "Stamp ink and spray paint on poplar wood"
   format: "160 x 120 cm"
-  group: "soon to be an oak tree?!"
+  # group: "soon to be an oak tree?!"
 
 - file: staimping_acorn-mouse.webp
   title: "acorn mouse"
   year: 2025
   medium: "Stamp ink and spray paint on poplar wood"
   format: "120 x 60 cm"
-  group: "soon to be an oak tree?!"
+  # group: "soon to be an oak tree?!"
 
 - file: staimping_acorn-caterpillar.webp
   title: "acorn caterpillar"
   year: 2025
   medium: "Stamp ink and spray paint on poplar wood"
   format: "120 x 60 cm"
-  group: "soon to be an oak tree?!"
+  # group: "soon to be an oak tree?!"
 
 - file: staimping_acorn-popped.webp
   title: "acorn popped"
   year: 2025
   medium: "Stamp ink on paper"
   format: "100 x 100 cm"
-  group: "soon to be an oak tree?!"
+  # group: "soon to be an oak tree?!"
 
 - file: staimping_snail-straight.webp
   title: "snail I"
   year: 2026
   medium: "Stamp ink and spray paint on paper"
   format: "150 x 100 cm"
-  group: "hysterical snail"
+  # group: "hysterical snail"
 
 - file: staimping_snail-crossing.webp
   title: "snail II"
   year: 2026
   medium: "Stamp ink and spray paint on paper"
   format: "150 x 100 cm"
-  group: "hysterical snail"
+  # group: "hysterical snail"
 
 - file: staimping_snail-love.webp
   title: "snail III"
   year: 2026
   medium: "Stamp ink and spray paint on paper"
   format: "150 x 100 cm"
-  group: "hysterical snail"
+  # group: "hysterical snail"
 
 - file: staimping_multiuse.webp
   title: "admiration"
   year: 2026
   medium: "Stamp ink and spray paint on wooden formwork panel"
   format: "150 x 50 cm"
-  group: "miscellaneous"
+  # group: "miscellaneous"
 
 - file: staimping_octo.webp
   title: "impro on left overs"
   year: 2026
   medium: "Stamp ink and spray paint on particleboard"
   format: "98 x 122 cm"
-  group: "miscellaneous"
+  # group: "miscellaneous"
 
 - file: staimping_minister-kindness.webp
   title: "minister kindness"
   year: 2016
   medium: "Stamp ink and spray paint on poplar wood"
   format: "... x ... cm"
-  group: "miscellaneous"
+  # group: "miscellaneous"
 
 - file: staimping_itsaboutclass.webp
   title: "its about class, ..."
   year: 2026
   medium: "Stamp ink and spray paint on paper"
   format: "150 x 120 cm"
-  group: "miscellaneous"
+  # group: "miscellaneous"
 
 - file: staimping_rabbit-wolf.webp
   title: "leash"
   year: 2026
   medium: "Stamp ink and spray paint on paper"
   format: "150 x 100 cm"
-  group: "miscellaneous"
+  # group: "miscellaneous"
 
 - file: staimping_reptiloid.webp
   title: "the endzeitgeist"
   year: 2026
   medium: "Stamp ink and acryl on paper"
   format: "140 x 100 cm"
-  group: "miscellaneous"
+  # group: "miscellaneous"
 
 
 # Add more entries here...
